@@ -1,71 +1,71 @@
-# 貢獻指南
+# Contributing Guidelines
 
-感謝您對 W3C Agent Ontology Use Cases 專案的興趣！我們歡迎社群成員貢獻新的 Use Case，以豐富本體論的應用範例。
+Thank you for your interest in the W3C Agent Ontology Use Cases project! We welcome contributions of new Use Cases from the community to enrich the application examples of the ontology.
 
-本指南將說明如何貢獻一個新的 Use Case，包括流程、格式要求和提交方式。
+This guide will explain how to contribute a new Use Case, including the process, formatting requirements, and submission method.
 
-## 貢獻流程
+## Contribution Process
 
-1.  **Fork 專案**：首先，請 Fork 本專案到您的 GitHub 帳戶。
-2.  **Clone 您的 Fork**：將您 Fork 的專案 Clone 到本地開發環境。
+1.  **Fork the Repository**: First, please fork this repository to your GitHub account.
+2.  **Clone Your Fork**: Clone your forked repository to your local development environment.
     ```bash
-    git clone https://github.com/您的用戶名/agent-ontology-use-cases.git
+    git clone https://github.com/your-username/agent-ontology-use-cases.git
     cd agent-ontology-use-cases
     ```
-3.  **建立新分支**：為您的貢獻建立一個新的分支。建議使用有意義的名稱，例如 `feat/new-use-case-name`。
+3.  **Create a New Branch**: Create a new branch for your contribution. We recommend using a meaningful name, such as `feat/new-use-case-name`.
     ```bash
-    git checkout -b feat/您的新用例名稱
+    git checkout -b feat/your-new-use-case-name
     ```
-4.  **建立新的 Use Case 目錄**：在 `use-cases/` 目錄下，根據您的 Use Case 主題，選擇或建立一個新的子目錄。例如，如果您的 Use Case 屬於「AI 與機器學習」類別，您可以在 `use-cases/ai-and-ml/` 下建立一個新的目錄，名稱應簡潔且具描述性（例如 `my-new-ai-use-case`）。
+4.  **Create a New Use Case Directory**: Under the `use-cases/` directory, select or create a new subdirectory based on the theme of your Use Case. For example, if your Use Case belongs to the "AI and Machine Learning" category, you can create a new directory under `use-cases/ai-and-ml/` with a concise and descriptive name (e.g., `my-new-ai-use-case`).
     ```bash
-    mkdir -p use-cases/您的類別/您的新用例名稱
+    mkdir -p use-cases/your-category/your-new-use-case-name
     ```
-5.  **開發您的 Use Case**：
-    *   在新的 Use Case 目錄中，建立所有必要的檔案（詳見下方的「檔案要求」）。
-    *   確保您的 Use Case 遵循本體論的規範，並提供清晰的範例。
-6.  **執行本地檢查**：在提交之前，請務必執行以下指令，確保程式碼品質和格式一致。
+5.  **Develop Your Use Case**:
+    *   In the new Use Case directory, create all necessary files (see "File Requirements" below).
+    *   Ensure your Use Case adheres to the ontology specifications and provides clear examples.
+6.  **Run Local Checks**: Before committing, please run the following commands to ensure code quality and consistent formatting.
     ```bash
     pnpm install
     pnpm lint
     pnpm format
-    pnpm typecheck # 如果您的貢獻包含 TypeScript 程式碼
+    pnpm typecheck # If your contribution includes TypeScript code
     ```
-7.  **提交變更**：將您的變更提交到您的分支。請使用清晰且具描述性的 commit message。
+7.  **Commit Changes**: Commit your changes to your branch. Please use a clear and descriptive commit message.
     ```bash
     git add .
-    git commit -m "feat: Add [您的新用例名稱] use case"
+    git commit -m "feat: Add [Your New Use Case Name] use case"
     ```
-8.  **Push 到您的 Fork**：將您的分支推送到您 Fork 的遠端儲存庫。
+8.  **Push to Your Fork**: Push your branch to your forked remote repository.
     ```bash
-    git push origin feat/您的新用例名稱
+    git push origin feat/your-new-use-case-name
     ```
-9.  **建立 Pull Request (PR)**：在 GitHub 上，從您的分支向本專案的 `main` 分支建立一個 Pull Request。請提供詳細的描述，說明您的 Use Case 解決了什麼問題，以及它如何展示 Agent Ontology 的概念。
+9.  **Create a Pull Request (PR)**: On GitHub, create a Pull Request from your branch to the `main` branch of this repository. Provide a detailed description explaining what problem your Use Case solves and how it demonstrates the concepts of the Agent Ontology.
 
-## 檔案要求
+## File Requirements
 
-每個新的 Use Case 目錄應包含以下檔案：
+Each new Use Case directory should contain the following files:
 
-*   **`README.md`**：
-    *   **標題**：Use Case 的名稱。
-    *   **簡介**：簡要說明 Use Case 的目的和背景。
-    *   **使用者故事 (User Story)**：以「As a [角色], I want to [目標], so that [價值]」的格式描述。
-    *   **關鍵概念 (Key Concepts Illustrated)**：列出此 Use Case 所展示的 Agent Ontology 核心概念。
-    *   **工作流程分解 (Workflow Breakdown)**：詳細說明 Use Case 的步驟和代理人之間的互動。
-    *   **本體論映射 (Ontology Mapping)**：說明 Use Case 中的實體如何映射到 Agent Ontology 的概念。
-*   **`.jsonld` 檔案**：至少一個 JSON-LD 格式的檔案，代表 Agent Ontology 的實例。
-*   **`.ttl` 檔案**：至少一個 Turtle (Terse RDF Triple Language) 格式的檔案，代表 Agent Ontology 的實例。
-*   **`.shacl.jsonld` 檔案** (可選但強烈建議)：JSON-LD 格式的 SHACL 檔案，定義此 Use Case 的驗證規則。
-*   **`.shacl.ttl` 檔案** (可選但強烈建議)：Turtle 格式的 SHACL 檔案，定義此 Use Case 的驗證規則。
+*   **`README.md`**:
+    *   **Title**: The name of the Use Case.
+    *   **Introduction**: A brief explanation of the Use Case's purpose and background.
+    *   **User Story**: Described in the format "As a [role], I want to [goal], so that [value]".
+    *   **Key Concepts Illustrated**: List the core Agent Ontology concepts demonstrated by this Use Case.
+    *   **Workflow Breakdown**: Detailed steps and interactions between agents in the Use Case.
+    *   **Ontology Mapping**: Explain how entities in the Use Case map to Agent Ontology concepts.
+*   **`.jsonld` file**: At least one JSON-LD formatted file representing an instance of the Agent Ontology.
+*   **`.ttl` file**: At least one Turtle (Terse RDF Triple Language) formatted file representing an instance of the Agent Ontology.
+*   **`.shacl.jsonld` file** (Optional but highly recommended): A SHACL file in JSON-LD format, defining validation rules for this Use Case.
+*   **`.shacl.ttl` file** (Optional but highly recommended): A SHACL file in Turtle format, defining validation rules for this Use Case.
 
-## 格式要求
+## Formatting Requirements
 
-*   **檔案命名**：Use Case 目錄名稱和檔案名稱應使用小寫字母和連字號 (`-`)。
-*   **程式碼風格**：請遵循專案的 ESLint 和 Prettier 設定。在提交前執行 `pnpm lint` 和 `pnpm format`。
-*   **文件清晰度**：`README.md` 應清晰、簡潔、易於理解，並提供足夠的細節來解釋 Use Case。
-*   **本體論一致性**：確保您的 `.jsonld` 和 `.ttl` 檔案嚴格遵循 Agent Ontology 的定義。如果提供 SHACL 檔案，請確保它們能正確驗證您的實例。
+*   **File Naming**: Use Case directory names and file names should use lowercase letters and hyphens (`-`).
+*   **Code Style**: Please adhere to the project's ESLint and Prettier configurations. Run `pnpm lint` and `pnpm format` before committing.
+*   **Documentation Clarity**: The `README.md` should be clear, concise, easy to understand, and provide sufficient detail to explain the Use Case.
+*   **Ontology Consistency**: Ensure your `.jsonld` and `.ttl` files strictly follow the definitions of the Agent Ontology. If SHACL files are provided, ensure they correctly validate your instances.
 
-## 審查流程
+## Review Process
 
-提交 PR 後，專案維護者將會審查您的貢獻。他們可能會提出修改建議或要求澄清。請耐心配合，直到您的貢獻被接受並合併到 `main` 分支。
+After submitting a PR, project maintainers will review your contribution. They may suggest modifications or request clarifications. Please cooperate patiently until your contribution is accepted and merged into the `main` branch.
 
-感謝您的貢獻！
+Thank you for your contribution!
